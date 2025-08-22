@@ -16,6 +16,8 @@ spec:
   resources:
     requests:
       storage: 1Gi
+  storageClassName: local-storage
+
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -65,4 +67,5 @@ spec:
     - port: 3306
       targetPort: 3306
   clusterIP: None
+
 
