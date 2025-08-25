@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: altiplanooo/e-9antra_kids-frontend:1.0.59%BUILD_NUMBER%
+          image: altiplanooo/e-9antra_kids-frontend:1.0.60%BUILD_NUMBER%
           ports:
             - containerPort: 80
 ---

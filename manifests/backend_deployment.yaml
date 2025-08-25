@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: altiplanooo/e-9antra_kids-backend:1.0.59%BUILD_NUMBER%
+          image: altiplanooo/e-9antra_kids-backend:1.0.60%BUILD_NUMBER%
           ports:
             - containerPort: 8094
           env:
