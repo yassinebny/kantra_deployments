@@ -1,41 +1,36 @@
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: e-9antrakids-backend
+  name: e-9antrakids-frontend
   labels:
-    app: e-9antrakids-backend
+    app: e-9antrakids-frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: e-9antrakids-backend
+      app: e-9antrakids-frontend
   template:
     metadata:
       labels:
-        app: e-9antrakids-backend
+        app: e-9antrakids-frontend
     spec:
       containers:
-        - name: backend
-          image: altiplanooo/e-9antra_kids-backend:1.0.62
+        - name: frontend
+          image: altiplanooo/e-9antra_kids-frontend:1.0.46
           ports:
-            - containerPort: 8094
-          env:
-            - name: SPRING_DATASOURCE_URL
-              value: jdbc:mysql://e-9antrakids-mysql:3306/demopfe
-            - name: SPRING_DATASOURCE_USERNAME
-              value: root
-            - name: SPRING_DATASOURCE_PASSWORD
-              value: root
+            - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: e-9antrakids-backend
+  name: e-9antrakids-frontend
 spec:
   selector:
-    app: e-9antrakids-backend
+    app: e-9antrakids-frontend
   ports:
-    - port: 8094
-      targetPort: 8094
+    - port: 4200
+      targetPort: 80
   type: ClusterIP
+
 
