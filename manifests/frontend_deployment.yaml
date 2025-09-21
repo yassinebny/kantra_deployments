@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: altiplanooo/e-9antra_kids-frontend:1.0.95
+          image: nourchawebi/elearningfrontasslam:latest
           ports:
             - containerPort: 80
 ---
@@ -32,6 +32,7 @@ spec:
     - port: 4200
       targetPort: 80
   type: ClusterIP
+
 
 
 
