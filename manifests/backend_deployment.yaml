@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: nourchawebi/eleearningback-backend:latest
+          image: altiplanooo/e-9antra_kids-backend:1.0.104
           ports:
             - containerPort: 8094
           env:
@@ -38,6 +38,7 @@ spec:
     - port: 8094
       targetPort: 8094
   type: ClusterIP
+
 
 
 
